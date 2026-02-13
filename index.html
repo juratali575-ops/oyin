@@ -168,7 +168,7 @@ function aiMove(){
 function initMultiplayer(){
     roomCode = generateRoomCode();
     document.getElementById("roomDisplay").innerText = "Room kodi: "+roomCode;
-    socket = io("https://your-server-url"); // server URL o'zgartiring
+    socket = io("https://shaxmat.uz"); // server URL o'zgartiring
     socket.emit("join",roomCode);
     socket.on("move",data=>{
         chess.move({from:data.from,to:data.to,promotion:"q"});
